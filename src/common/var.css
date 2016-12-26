@@ -2,6 +2,7 @@
 
   /* Transition
   -------------------------- */
+  --all-transition: all .3s cubic-bezier(.645,.045,.355,1);
   --fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
   --fade-linear-transition: opacity 200ms linear;
   --md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
@@ -146,7 +147,7 @@
 
   --select-input-color: var(--color-grey);
   --select-multiple-input-color: #666;
-  --select-input-focus-background: #2ea0ff;
+  --select-input-focus-background: var(--color-primary);
   --select-input-font-size: 12px;
 
   --select-tag-height: 24px;
@@ -170,7 +171,7 @@
   --select-dropdown-max-height: 274px;
   --select-dropdown-padding: 6px 0;
   --select-dropdown-empty-padding: 10px 0;
-  --select-dropdown-border: solid 1px #d3dce6;
+  --select-dropdown-border: solid 1px var(--disabled-border-base);
 
   /* Alert
   -------------------------- */
@@ -264,7 +265,7 @@
   --input-disabled-fill: var(--disabled-fill-base);
   --input-disabled-border: var(--disabled-border-base);
   --input-disabled-color: var(--disabled-color-base);
-  --input-disabled-placeholder-color: #C0CCDA;
+  --input-disabled-placeholder-color: var(--color-grey);
 
   --input-large-font-size: 16px;
   --input-large-height: 42px;
@@ -348,9 +349,9 @@
   --button-ghost-fill: transparent;
   --button-ghost-border: none;
 
-  --button-disabled-color: #C0CCDA;
+  --button-disabled-color: var(--color-grey);
   --button-disabled-fill: #EFF2F7;
-  --button-disabled-border: #D3DCE6;
+  --button-disabled-border: var(--disabled-border-base);
 
   --button-primary-border: var(--color-primary);
   --button-primary-color: var(--color-white);
@@ -379,7 +380,6 @@
   --button-plain-border-color: var(--border-color-base);
   --button-plain-color: var(--font-color-base);
 
-
   /* cascader
   -------------------------- */
   --cascader-height: 200px;
@@ -387,7 +387,7 @@
   /* Switch
  -------------------------- */
   --switch-on-color: var(--color-primary);
-  --switch-off-color: #C0CCDA;
+  --switch-off-color: var(--color-grey);
   --switch-disabled-color: #E5E9F3;
   --switch-disabled-text-color: #F9FAFC;
 
@@ -426,7 +426,7 @@
   --pagination-button-size: 28px;
   --pagination-button-disabled-color: #e4e4e4;
   --pagination-button-disabled-fill: var(--color-white);
-  --pagination-border-color: #D3DCE6;
+  --pagination-border-color: var(--disabled-border-base);
   --pagination-hover-fill: var(--color-primary);
   --pagination-hover-color: var(--color-white);
 
@@ -434,7 +434,7 @@
  -------------------------- */
   --popover-fill: var(--color-white);
   --popover-font-size: 12px;
-  --popover-border-color: #d3dce6;
+  --popover-border-color: var(--disabled-border-base);
   --popover-arrow-size: 6px;
   --popover-padding: 10px;
   --popover-title-font-size: 13px;
@@ -453,7 +453,6 @@
   -------------------------- */
   --tag-padding: 0 5px;
   --tag-fill: var(--border-color-hover);
-  --tag-border: var(--border-color-hover);
   --tag-color: var(--color-white);
   --tag-close-color: #666;
   --tag-font-size: 12px;
@@ -524,7 +523,7 @@
   --------------------------*/
   --menu-item-color: var(--link-color);
   --menu-item-fill: #eff2f7;
-  --menu-item-hover-fill: #d3dce6;
+  --menu-item-hover-fill: var(--disabled-border-base);
   --submenu-item-fill: #e5e9f2;
 
   --dark-menu-item-color: var(--link-color);
@@ -546,8 +545,7 @@
   --datepicker-off-color: rgba(var(--datepicker-color), 0.7);
   --datepicker-header-color: var(--border-color-hover);
   --datepicker-icon-color: #99a9bf;
-  --datepicker-trigger-color: #c0ccda;
-  --datepicker-border-color: #d3dce6;
+  --datepicker-border-color: var(--disabled-border-base);
   --datepicker-inner-border-color: #e4e4e4;
   --datepicker-cell-hover-color: rgba(var(--color-primary), 0.3);
   --datepicker-inrange-color: rgba(var(--color-primary), 0.05);
