@@ -8,7 +8,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: #fff;
+    background: var(--fill-base);
     border-radius: var(--border-radius-small);
     box-shadow: var(--dialog-box-shadow);
     box-sizing: border-box;

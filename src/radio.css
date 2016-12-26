@@ -125,9 +125,9 @@
       white-space: nowrap;
       vertical-align: middle;
       cursor: pointer;
-      background: var(--button-default-fill);
+      background: var(--button-fill);
       border: var(--border-base);
-      color: var(--button-default-color);
+      color: var(--button-color);
       -webkit-appearance: none;
       text-align: center;
       box-sizing: border-box;

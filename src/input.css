@@ -5,7 +5,7 @@
   @b input {
     position: relative;
     font-size: var(--font-size-base);
-    
+
     @e inner {
       display: block;
       padding: 3px 10px;
@@ -22,9 +22,9 @@
       font-size: inherit;
       line-height: normal;
 
-      &::placeholder {
-        color: var(--input-placeholder-color);
-      }
+      /*&::placeholder {
+        color:  var(--input-placeholder-color);
+      }*/
 
       &:hover {
         border-color: var(--input-hover-border);

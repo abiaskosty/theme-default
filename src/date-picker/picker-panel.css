@@ -4,8 +4,8 @@
   @b picker-panel {
     color: var(--datepicker-color);
     border: 1px solid var(--datepicker-border-color);
-    box-shadow: 0 2px 6px #ccc;
-    background: #fff;
+    box-shadow: var(--box-shadow-base);
+    background: var(--fill-base);
     border-radius: 2px;
     line-height: 20px;
     margin: 5px 0;
@@ -43,13 +43,15 @@
       text-align: left;
       outline: none;
       cursor: pointer;
+      text-transform: none;
+      font-weight: 200;
 
       &:hover {
-        background-color: #e5e9f2;
+        background-color: var(--datepicker-hover-fill);
       }
 
       &.active {
-        background-color: #e6f1fe;
+        background-color: var(--datepicker-active-fill);
         color: var(--datepicker-active-color);
       }
     }
@@ -79,6 +81,7 @@
       cursor: pointer;
       outline: none;
       margin-top: 3px;
+      padding: 0;
 
       &:hover {
         color: var(--datepicker-text-hover-color);
@@ -94,20 +97,18 @@
     }
   }
 
-  .el-picker-panel *[slot=sidebar],
   .el-picker-panel__sidebar {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 110px;
+    width: var(--datepicker-sidebar-width);
     border-right: 1px solid var(--datepicker-inner-border-color);
     box-sizing: border-box;
     padding-top: 6px;
-    background-color: #f9fafc;
+    background-color: var(--datepicker-sidebar-fill);
   }
 
-  .el-picker-panel *[slot=sidebar] + .el-picker-panel__body,
   .el-picker-panel__sidebar + .el-picker-panel__body {
-    margin-left: 110px;
+    margin-left: var(--datepicker-sidebar-width);
   }
 }

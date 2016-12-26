@@ -53,10 +53,10 @@
       }
 
       &.disabled {
-        background-color: #f4f4f4;
+        background-color: var(--datepicker-disabled-fill);
         opacity: 1;
         cursor: not-allowed;
-        color: #ccc;
+        color: var(--datepicker-disabled-color);
       }
 
       &.week {

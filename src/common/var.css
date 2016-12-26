@@ -10,21 +10,38 @@
 
   /* Colors
   -------------------------- */
-  --color-primary: #20a0ff;
-  --color-success: #13ce66;
+  --color-primary: #cef;
+  --color-success: #b3ffb3;
   --color-warning: #f7ba2a;
-  --color-danger: #ff4949;
-  --color-info: #50BFFF;
+  --color-danger: #FB6950;
+  --color-info: #00AAFF;
   --color-blue: #2e90fe;
   --color-blue-light: #5da9ff;
   --color-blue-lighter: rgba(var(--color-blue), 0.12);
   --color-white: #fff;
   --color-black: #000;
+  --color-dark: #141E31;
   --color-grey: #C0CCDA;
+  --color-transparent: transparent;
+
+  /* Fill
+  -------------------------- */
+  --fill-base: var(--color-dark);
+  --fill-transparent: var(--color-transparent);
+  --fill-action-base: var(--fill-base);
+  --fill-action-hover: rgba(var(--color-primary), 0.2);
+  --fill-action-active: rgba(var(--color-primary), 0.5);
+
+  /* Font
+  -------------------------- */
+  --font-size-base: 14px;
+  --font-color-base: var(--color-primary);
+  --font-color-disabled-base: rgba(var(--color-primary), 0.2);
+  --font-color-active: var(--color-primary);
 
   /* Link
   -------------------------- */
-  --link-color: #475669;
+  --link-color: var(--color-primary);
   --link-hover-color: var(--color-primary);
 
   /* Border
@@ -43,16 +60,6 @@
   -------------------------- */
   --box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
   --box-shadow-dark: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .12);
-
-  /* Fill
-  -------------------------- */
-  --fill-base: var(--color-white);
-
-  /* Font
-  -------------------------- */
-  --font-size-base: 14px;
-  --font-color-base: #1f2d3d;
-  --font-color-disabled-base: #bbb;
 
   /* Size
   -------------------------- */
@@ -210,6 +217,8 @@
   --message-warning-color: var(--color-warning);
   --message-danger-color: var(--color-danger);
 
+  --message-border: 1px solid rgba(204, 238, 255, 0.3);
+
   /* Notification
   -------------------------- */
   --notification-width: 330px;
@@ -234,7 +243,7 @@
   --input-font-size: var(--font-size-base);
   --input-color: var(--font-color-base);
   --input-width: 140px;
-  --input-height: 36px;
+  --input-height: 27px;
   --input-shadow-hover: var(--shadow-base);
   --input-border: var(--border-base);
   --input-border-color: var(--border-color-base);
@@ -244,7 +253,7 @@
   --input-fill-disabled: var(--disabled-fill-base);
   --input-color-disabled: var(--font-color-disabled-base);
   --input-icon-color: var(--color-grey);
-  --input-placeholder-color: #99a9bf;
+  --input-placeholder-color: rgba(var(--font-color-base), 0.5);
   --input-max-width: 314px;
 
   --input-hover-border: var(--border-color-hover);
@@ -317,6 +326,11 @@
   --button-paddding: 5px 20px;
   --button-padding-vertical: 10px;
   --button-padding-horizontal: 15px;
+  --button-border: var(--border-base);
+
+  --button-color: var(--font-color-base);
+  --button-fill: var(--fill-transparent);
+  --button-border-color: var(--border-color-base);
 
   --button-large-font-size: 16px;
   --button-large-padding-vertical: 11px;
@@ -329,10 +343,6 @@
   --button-mini-font-size: 12px;
   --button-mini-padding-vertical: 4px;
   --button-mini-padding-horizontal: 4px;
-
-  --button-default-color: #1F2D3D;
-  --button-default-fill: var(--color-white);
-  --button-default-border: #c4c4c4;
 
   --button-ghost-color: #666;
   --button-ghost-fill: transparent;
@@ -364,6 +374,10 @@
 
   --button-hover-tint-percent: 20%;
   --button-active-shade-percent: 10%;
+
+  --button-plain-fill: var(--fill-transparent);
+  --button-plain-border-color: var(--border-color-base);
+  --button-plain-color: var(--font-color-base);
 
 
   /* cascader
@@ -529,17 +543,24 @@
   /* DatePicker
   --------------------------*/
   --datepicker-color: var(--link-color);
-  --datepicker-off-color: #ddd;
+  --datepicker-off-color: rgba(var(--datepicker-color), 0.7);
   --datepicker-header-color: var(--border-color-hover);
   --datepicker-icon-color: #99a9bf;
   --datepicker-trigger-color: #c0ccda;
   --datepicker-border-color: #d3dce6;
   --datepicker-inner-border-color: #e4e4e4;
-  --datepicker-cell-hover-color: #e5e9f2;
-  --datepicker-inrange-color: #D3ECFF;
-  --datepicker-inrange-hover-color: #AFDCFF;
-  --datepicker-active-color: var(--color-primary);
-  --datepicker-text-hover-color: #20a0ff;
+  --datepicker-cell-hover-color: rgba(var(--color-primary), 0.3);
+  --datepicker-inrange-color: rgba(var(--color-primary), 0.05);
+  --datepicker-inrange-hover-color: var(--datepicker-cell-hover-color);
+  --datepicker-active-color: rgba(var(--color-primary), 0.2);
+  --datepicker-text-hover-color: var(--font-color-active);
+  --datepicker-sidebar-fill: var(--fill-base);
+  --datepicker-disabled-fill: var(--fill-base);
+  --datepicker-disabled-color: var(--font-color-disabled-base);
+  --datepicker-sidebar-width: 9em;
+  --datepicker-hover-fill: var(--fill-action-hover);
+  --datepicker-active-fill: var(--fill-action-active);
+  --datepicker-range-body-min-width: 513px;
 
   /* Loading
   --------------------------*/

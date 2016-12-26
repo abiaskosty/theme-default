@@ -9,7 +9,7 @@
     border-color: tint($border-color, var(--button-hover-tint-percent));
     color: $color;
   }
-  
+
   &:active {
     background: shade($background-color, var(--button-active-shade-percent));
     border-color: shade($border-color, var(--button-active-shade-percent));
@@ -24,19 +24,19 @@
   }
 
   &.is-plain {
-    background: var(--button-default-fill);
-    border: var(--border-base);
-    color: var(--button-default-color);
+    background: var(--button-plain-fill);
+    border: var(--button-plain-border-color);
+    color: var(--button-plain-color);
 
     &:hover,
     &:focus {
-      background: #fff;
+      background: var(--fill-base);
       border-color: $border-color;
       color: $background-color;
     }
-    
+
     &:active {
-      background: #fff;
+      background: var(--fill-base);
       border-color: shade($border-color, var(--button-active-shade-percent));
       color: shade($background-color, var(--button-active-shade-percent));
       outline: none;

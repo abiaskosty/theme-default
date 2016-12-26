@@ -2,14 +2,14 @@
 
 @component-namespace el {
   @b date-range-picker {
-    min-width: 520px;
+    min-width: var(--datepicker-range-body-min-width);
 
     &.has-sidebar.has-time {
       min-width: 766px;
     }
 
     &.has-sidebar {
-      min-width: 620px;
+      min-width: calc(var(--datepicker-range-body-min-width) + var(--datepicker-sidebar-width));
     }
 
     &.has-time {
@@ -22,7 +22,7 @@
     }
 
     .el-picker-panel__body {
-      min-width: 513px;
+      min-width: var(--datepicker-range-body-min-width);
     }
 
     .el-picker-panel__content {
@@ -122,7 +122,7 @@
         top: 13px;
         right: 0;
         z-index: 1;
-        background: #fff;
+        background: var(--fill-base);
       }
     }
   }

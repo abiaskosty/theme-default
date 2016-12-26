@@ -8,9 +8,9 @@
     line-height: 1;
     white-space: nowrap;
     cursor: pointer;
-    background: var(--button-default-fill);
-    border: var(--border-base);
-    color: var(--button-default-color);
+    background: var(--button-fill);
+    border: var(--button-border);
+    color: var(--button-color);
     -webkit-appearance: none;
     text-align: center;
     box-sizing: border-box;
@@ -20,7 +20,7 @@
     & + .el-button {
       margin-left: 10px;
     }
-    
+
     @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), var(--button-border-radius);
 
     &:hover,
@@ -28,7 +28,7 @@
       color: var(--color-primary);
       border-color: @color;
     }
-    
+
     &:active {
       color: shade(var(--color-primary), var(--button-active-shade-percent));
       border-color: @color;
@@ -48,21 +48,21 @@
     @when plain {
       &:hover,
       &:focus {
-        background: #fff;
-        border-color: var(--color-primary);
-        color: var(--color-primary);
+        background: var(--button-plain-fill);
+        border-color: var(--button-plain-border-color);
+        color: var(--button-plain-color);
       }
-      
+
       &:active {
-        background: #fff;
-        border-color: shade(var(--color-primary), var(--button-active-shade-percent));
-        color: shade(var(--color-primary), var(--button-active-shade-percent));
+        background: var(--button-plain-fill);
+        border-color: shade(var(--button-plain-border-color), var(--button-active-shade-percent));
+        color: shade(var(--button-plain-color), var(--button-active-shade-percent));
         outline: none;
       }
     }
 
     @when active {
-      color: shade(var(--color-primary), var(--button-active-shade-percent));
+      color: shade(var(--button-plain-color), var(--button-active-shade-percent));
       border-color: @color;
     }
 
@@ -78,16 +78,16 @@
       }
 
       &.el-button--text {
-        background-color: transparent;
+        background-color: var(--fill-transparent);
       }
 
       &.is-plain {
         &,
         &:hover,
         &:focus {
-          background-color: #fff;
-          border-color: #d3dce6;
-          color: #C0CCDA;
+          background-color: var(--button-plain-fill);
+          border-color: var(--button-plain-border-color);
+          color: var(--button-plain-color);
         }
       }
     }
