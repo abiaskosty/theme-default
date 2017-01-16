@@ -27,7 +27,7 @@
       border-top: 1px solid var(--datepicker-inner-border-color);
       padding: 4px;
       text-align: right;
-      background-color: #fff;
+      background-color: var(--color-white);
       position: relative;
     }
 
